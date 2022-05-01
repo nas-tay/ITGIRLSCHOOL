@@ -1,0 +1,13 @@
+.menu li a {
+    position: absolute;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 150%;
+    color: #F00000;
+    text-align: center;
+    height: 21px;
+    top: 81px;
+    padding: 10px;
+}

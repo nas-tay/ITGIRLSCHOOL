@@ -1,0 +1,75 @@
+917 header,
+main,
+aside,
+footer,
+.main,
+.paragraphs,
+.texxt {
+    font-size: large;
+    font-size: xx-large;
+    font-weight: bold;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(204, 202, 202);
+    padding: 40px;
+}
+
+.mainaside {
+    display: flex;
+    flex-direction: row;
+}
+
+.texxt {
+    display: flex;
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 70%;
+    background-color: beige;
+    padding-top: 30px;
+    ;
+}
+
+.paragraphs {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.p3 {
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    background-color: rgb(241, 241, 179);
+    padding: 40px;
+}
+
+aside {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    width: 30%;
+    background-color: rgb(198, 216, 168);
+    padding-top: 70px;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(204, 202, 202);
+}
+
+.f4 {
+    background-color: rgb(235, 231, 231);
+    margin: 30px;
+    padding: 40px;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Опросник</title>
+        <link rel="icon" href="https://cdn-icons.flaticon.com/png/512/2179/premium/2179088.png?token=exp=1643229335~hmac=a4645b98d35412baa1217d367313294a" type="image/png">
+    </head>
+    <body>
+        <h1>Опрос для владельцев кошек</h1>
+        <form>
+        <div>
+            <label for="petname">Кличка питомца</label>
+            <input type="text" id="petname" />
+        </div><br/>
+        <div>
+            <label for="name">Имя владельца</label>
+            <input type="text" id="name" />
+        </div><br/>
+        <div>
+            <label for="phone">Контактный телефон</label>
+            <input type="text" id="phone" />
+        </div>
+        <div> 
+            <p>Укажите породу вашего питомца:</p>
+            <select>
+                <option value="1">&nbsp;</option>
+                <option value="2">Британская</option>
+                <option value="3">Русская голубая</option>
+                <option value="4">Абиссинская</option>
+                <option value="5">Сфинкс</option>
+                <option value="6">Девон-рекс</option>
+                <option value="7">Корниш-рекс</option>
+                <option value="8">Ориентальная</option>
+                <option value="9">Манчкин</option>
+                <option value="10">Сиамская</option>
+                <option value="11">Персидская</option>
+                <option value="12">Рэгдол</option>
+                <option value="13">Шотландская вислоухая</option>
+                <option value="14">Норвежская лесная</option>
+                <option value="15">Бурма</option> 
+                <option value="16">Бирманская</option>
+                <option value="17">Сибирская</option>
+                <option value="18">Мэнкс</option>
+                <option value="19">Гималайская</option>   
+            </select>
+        </div>
+        <div>
+            <p>Укажите рацион питания вашего питомца:</p>
+            <input type="checkbox" name="formula" value="1"/>Сухой корм <br/>
+            <input type="checkbox" name="formula" value="2"/>Влажный корм <br/>
+            <input type="checkbox" name="formula" value="3"/> Натуральный корм
+        </div>
+        <div>
+            <p>Укажите пол питомца:</p>
+            <label for="f">Самка</label><br/>
+            <input type="radio" name="sex" id="f"/><br/>
+            <label for="m">Самец</label><br/>
+            <input type="radio" name="sex" id="m"/>
+        </div>
+        <div>
+            <p>Комментарий владельца:</p>
+            <textarea rows="10" cols="70"></textarea>
+        </div><br/>
+            <label for="photo">Фото питомца</label>
+            <input type="file" id="photo"/><br/>
+        <input type="submit" />
+        <input type="reset" />
+    </form>
+    </body>
+</html>

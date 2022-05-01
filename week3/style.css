@@ -1,0 +1,155 @@
+#logo {
+    position: absolute;
+    width: 189.19px;
+    height: 82px;
+    left: 147.08px;
+    top: 28.3px;
+}
+
+.menu {
+    position: absolute;
+    top: 52.55px;
+    height: 19px;
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 14px;
+    line-height: 19px;
+    text-decoration: none;
+    color: #000000;
+}
+
+#howitworks {
+    width: 88px;
+    left: 578.73px;
+}
+
+#calculator {
+    width: 135px;
+    left: 725.73px;
+}
+
+.menu:hover {
+    text-decoration: underline;
+}
+
+.menu:visited {
+    color: #900060;
+}
+
+#shop,
+#nosub {
+    position: absolute;
+    left: 145.73px;
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    color: #000000;
+    margin-block-end: 0px;
+    margin-block-start: 0px;
+    margin-inline-end: 0px;
+    margin-inline-start: 0px;
+}
+
+#shop {
+    width: 519px;
+    height: 164px;
+    top: 267px;
+    font-weight: 800;
+    font-size: 60px;
+    line-height: 82px;
+}
+
+#nosub {
+    width: 432.53px;
+    height: 64px;
+    top: 464.25px;
+    font-weight: 600;
+    font-size: 23px;
+    line-height: 32px;
+}
+
+.courier {
+    position: relative;
+    width: 704.26px;
+    height: 810.43px;
+    left: 673.61px;
+    top: 146.79px;
+
+}
+
+.signin {
+    position: absolute;
+    font-family: Manrope;
+    font-style: normal;
+}
+
+#email {
+    width: 469.42px;
+    height: 81.6px;
+    left: 145.73px;
+    top: 597.2px;
+    background: #FFFFFF;
+    box-shadow: 20px 10px 100px rgba(0, 0, 0, 0.1);
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 32px;
+    color: #000000;
+    padding-left: 2em;
+    opacity: 0.2;
+}
+
+#start {
+    width: 145.43px;
+    height: 60.6px;
+    left: 459.02px;
+    top: 607.7px;
+    font-weight: 800;
+    font-size: 16px;
+    line-height: 32px;
+    color: #FFFFFF;
+    background: #FF4229;
+    border-radius: 50px;
+}
+
+.courier .redcrl {
+    position: absolute;
+    width: 309.74px;
+    height: 309.74px;
+    left: 415.99px;
+    top: 151.06px;
+    background: #FE351F;
+    filter: blur(200px);
+    border-radius: 154.872px;
+}
+
+#yellowc {
+    position: absolute;
+    width: 195.46px;
+    height: 195.46px;
+    left: 323.02px;
+    top: 414.27px;
+
+    background: #FFC04D;
+    filter: blur(200px);
+    border-radius: 154.872px;
+}
+
+#blue {
+    position: absolute;
+    width: 402.71px;
+    height: 458.67px;
+    left: 1618.72px;
+    top: -55.19px;
+
+    opacity: 0.5;
+    transform: rotate(105deg);
+}
+
+#learnmore {
+    position: absolute;
+    width: 601.36px;
+    height: 102.45px;
+    left: 147.71px;
+    top: 792.58px;
+}

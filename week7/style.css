@@ -70,12 +70,6 @@ body {
     background-image: url(../img/Logo.svg);
 }
 
-.image__main {
-    position: absolute;
-    right: 0;
-    max-width: 50%;
-}
-
 .menu {
     display: flex;
     align-items: center;
@@ -252,18 +246,10 @@ body {
     .partners {
         display: none;
     }
-
-    .image__main {
-        display: none;
-    }
 }
 
 @media screen and (max-width:767px) {
     .partners {
-        display: none;
-    }
-
-    .image__main {
         display: none;
     }
 

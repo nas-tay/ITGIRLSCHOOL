@@ -41,21 +41,33 @@
         }
 
         .image {
-            width: 300px;
+            width: 280px;
             height: 200px;
             text-align: center;
+        }
+
+        @media screen and (max-width: 400px) {
+            .calculator {
+                max-width: 170px;
+            }
+
+            .calc {
+                margin: 5px;
+            }
         }
     </style>
 </head>
 <body>
-    <h1>Калькулятор</h1>
-    <input type="text" name="number" id="number1" placeholder="первое число">
-    <input type="text" name="number" id="number2" placeholder="второе число">
-    <button onclick="sumClick()">+</button>
-    <button onclick="subClick()">-</button>
-    <button onclick="mulClick()">*</button>
-    <button onclick="divClick()">/</button>
-    <input id="result" placeholder="результат">
+    <div class="calculator">
+        <h1>Калькулятор</h1>
+        <input class="calc" type="text" name="number" id="number1" placeholder="первое число">
+        <input class="calc" type="text" name="number" id="number2" placeholder="второе число">
+        <button class="calc" onclick="sumClick()">+</button>
+        <button class="calc" onclick="subClick()">-</button>
+        <button class="calc" onclick="mulClick()">*</button>
+        <button class="calc" onclick="divClick()">/</button>
+        <input class="calc" id="result" placeholder="результат">
+    </div>
     <h1>Клик клик</h1>
     <div class="changeColor" onclick="select(this)">Меняю цвет по клику</div>
     <div class="changeColor" onclick="select(this)">Меняю цвет по клику</div>

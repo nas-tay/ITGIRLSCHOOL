@@ -1,3 +1,5 @@
+
+
 // function sayHi() {
 //     alert( "Привет" );
 // }
@@ -46,7 +48,71 @@
 //     console.log(checks[2].checked);
 // }
 
-function changeMe() {
-    let  catImage = document.getElementById('catImage');
-    catImage.src = "https://magazine.skyeng.ru/wp-content/uploads/2019/03/shutterstock_745196731.jpg";
-}
+// function changeMe() {
+//     let  catImage = document.getElementById('catImage');
+//     catImage.src = "https://magazine.skyeng.ru/wp-content/uploads/2019/03/shutterstock_745196731.jpg";
+// }
+
+// function select(sender) {
+//     sender.classList.add("selected");
+// }
+
+// function goTo() {
+//     location.href = "https://yandex.ru";
+// }
+
+// function find() {
+//     let ageTableInput = document.getElementById('age-table');
+//     console.log(ageTableInput);
+// }
+
+// let a = document.getElementsByTagName('label');
+
+// function sum1(a,b) {
+//     return a+b;
+// }
+
+// let sum2 = function(a,b) {
+//     return a+b;
+// };
+// let result = sum2(2,3);
+
+// console.log(result);
+
+// function test(func) {
+//     func();
+// }
+
+// test(function() {
+//     console.log('Hello!');
+// });
+
+// console.log((function (a,b) {
+//     return(a+b);
+// })(2,5));
+
+// let sum3 = (a, b) => a + b;
+
+// let result = sum3(12, 1);
+
+// console.log(result);
+
+// let y = x => x * x;
+// console.log(y(8));
+
+// let showMessage = () => {
+//     let name = prompt("What's your name?");
+//     console.log('Hi Yo');
+// }
+// showMessage();
+
+// console.log((function(a,b) {
+//     return a * b;
+// })(7,8));
+
+// let askName = () => {
+//     let name = prompt('Как тебя зовут?');
+//     alert(`Привет ${name}!`);
+// }
+
+// askName();

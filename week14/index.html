@@ -4,102 +4,77 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script src="classwork.js"></script>
+    <title>14week</title>
+    <script src="index.js"></script>
+    <style>
+        .changeColor {
+            border: 1px solid black;
+            width: 300px;
+            height: 30px;
+            margin: 30px 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .selected {
+            background-color:rgb(191, 233, 235);
+        }
+
+        .btn-icon {
+            width: 25px;
+            height: 25px;
+            margin: 0 20px;
+        }
+
+        .gallery-block {
+            width: 50vw;
+            margin: 0 auto;
+        }
+
+        .gallery-block__title {
+            text-align: center;
+        }
+
+        .gallery {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .image {
+            width: 300px;
+            height: 200px;
+            text-align: center;
+        }
+    </style>
 </head>
 <body>
-    <!-- <div id="elem">
-        <div id="elem-content">Element</div>
+    <h1>Калькулятор</h1>
+    <input type="text" name="number" id="number1" placeholder="первое число">
+    <input type="text" name="number" id="number2" placeholder="второе число">
+    <button onclick="sumClick()">+</button>
+    <button onclick="subClick()">-</button>
+    <button onclick="mulClick()">*</button>
+    <button onclick="divClick()">/</button>
+    <input id="result" placeholder="результат">
+    <h1>Клик клик</h1>
+    <div class="changeColor" onclick="select(this)">Меняю цвет по клику</div>
+    <div class="changeColor" onclick="select(this)">Меняю цвет по клику</div>
+    <div class="changeColor" onclick="select(this)">Меняю цвет по клику</div>
+    <div class="gallery-block">
+        <h1 class="gallery-block__title">Галерея</h1>
+        <div class="gallery">
+            <div class="btn-icon" onclick="changeBack()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM310.6 345.4c12.5 12.5 12.5 32.75 0 45.25s-32.75 12.5-45.25 0l-112-112C147.1 272.4 144 264.2 144 256s3.125-16.38 9.375-22.62l112-112c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25L221.3 256L310.6 345.4z"/></svg>
+            </div>
+            <div class="image">
+                <img src="assets/img/cat1.jpeg" alt="beautiful cat showing her tongue" id="catImage">
+            </div>
+            <div class="btn-icon" onclick="changeImg()">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Pro 6.1.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license (Commercial License) Copyright 2022 Fonticons, Inc. --><path d="M256 0C114.6 0 0 114.6 0 256c0 141.4 114.6 256 256 256s256-114.6 256-256C512 114.6 397.4 0 256 0zM358.6 278.6l-112 112c-12.5 12.5-32.75 12.5-45.25 0s-12.5-32.75 0-45.25L290.8 256L201.4 166.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l112 112C364.9 239.6 368 247.8 368 256S364.9 272.4 358.6 278.6z"/></svg>
+            </div>
+        </div>
     </div>
-    <script>
-      // получить элемент
-      let elem = document.getElementById('elem'); 
-        // сделать его фон красным
-      elem.style.background = 'red';
-    </script> -->
-    
-    <!-- <table id="table">
-        <tr>
-        <td>Возраст:</td>
-        <td>
-        <label><input type="radio" name="age" value="young">до 18</label>
-        <label><input type="radio" name="age" value="mature"> от 18 до 50</label>
-        <label><input type="radio" name="age" value="senior"> старше 50</label>
-        </td>
-        </tr>
-        </table>
-        <script>
-          let inputs = table.getElementsByTagName('input');
-            console.log(inputs);
-        </script> -->
-
-        <!-- <button onclick="askName()">Click me</button> -->
-
-        <!DOCTYPE html>
-<html lang="ru">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Опросник</title>
-        <link rel="icon" href="https://cdn-icons.flaticon.com/png/512/2179/premium/2179088.png?token=exp=1643229335~hmac=a4645b98d35412baa1217d367313294a" type="image/png">
-    </head>
-    <body>
-        <h1>Пройдите наш опросник</h1>
-        <h2>Расскажите о своем домашнем любимце!</h2>
-        <img src="https://media.npr.org/assets/img/2021/08/11/gettyimages-1279899488_wide-f3860ceb0ef19643c335cb34df3fa1de166e2761-s1100-c50.jpg" alt="cat chilling on the sofa" width="50%" id="catImage" onclick="changeMe();">
-        <form name="catForm" action="#" method="post">
-        <label for="catName">1.Кличка питомца</label>
-        <p><input type="text" name="catName" id="catName" placeholder="Кличка" autofocus></p>
-        <label for="name">2.Имя владельца</label>
-        <p><input type="text" id="name" placeholder="Как вас зовут?"/></p>
-        <label for="phone" >Ваши контакты:</label>
-        <p><input type="text" id="phone" placeholder="Как с вами связаться?"/></p>
-        <p>3.Порода вашего питомца:</p>
-        <select>
-            <option disabled selected="selected">Выберите породу</option>
-            <option value="british">Британская</option>
-            <option value="russian blue">Русская голубая</option>
-            <option value="abyssinian">Абиссинская</option>
-            <option value="sphinx">Сфинкс</option>
-            <option value="devon rex">Девон-рекс</option>
-            <option value="cornish rex">Корниш-рекс</option>
-            <option value="oriental">Ориентальная</option>
-            <option value="munchcin">Манчкин</option>
-            <option value="siamese">Сиамская</option>
-            <option value="persian">Персидская</option>
-            <option value="ragdoll">Рэгдол</option>
-            <option value="scottish lop-eared">Шотландская вислоухая</option>
-            <option value="norwegian forest">Норвежская лесная</option>
-            <option value="burmese">Бурма</option> 
-            <option value="siberian">Сибирская</option>
-            <option value="manx">Мэнкс</option>
-            <option value="himalayan">Гималайская</option> 
-            <option value="nobreed">Дворовая</option>  
-        </select><br><br>
-        <fieldset id="FeedType" style="width: 200px;">
-            <legend>4. Корм</legend>
-            <p>Чем питается ваш питомец?</p>
-            <input type="checkbox" name="feed" value="dry">сухой корм <br/>
-            <input type="checkbox" name="feed" value="wet">влажный корм <br/>
-            <input type="checkbox" name="feed" value="natural"> натуральный корм
-        </fieldset><br>
-        <fieldset id="chooseSex" style="width: 200px;">
-            <legend>5. Пол</legend>
-            <p>Пол питомца:</p>
-            <label for="f">Самка</label>
-            <input type="radio" name="sex" id="f"/><br/>
-            <label for="m">Самец</label>
-            <input type="radio" name="sex" id="m"/>
-        </fieldset>
-        <p>6.Ваш комментарий:</p>
-        <textarea name="comments" rows="5" cols="30"></textarea><br><br>
-        <label for="photo">7.Фото вашего питомца</label>
-        <input type="file" id="photo"><br>
-        <p>Готово! Сохраните ваши ответы</p>
-        <p><input type="button" name="save" value="Сохранить" onclick="clickMe()"></p>
-    </form>
     </body>
-</html>
-</body>
-</html>
+    </html>

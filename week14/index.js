@@ -59,3 +59,31 @@ function changeBack() {
     let catImage = document.getElementById('catImage');
     catImage.src = "assets/img/cat1.jpeg";
 }
+
+// const box = document.querySelector('.box');
+// const b = 25
+
+// const el = document.createElement('div');
+// el.style.cssText = 'width: 100px; height: 20px; background-color:yellow';
+
+// box.append(el)
+
+// box.innerHTML = `<input type="text" placeholder="введите имя"/>
+// <h1>${b}</h1>
+// `
+
+const input = document.querySelector('.input');
+const list = document.querySelector('.list')
+
+function clearInput() {
+    const name = input.value;
+    const li = document.createElement('li')
+    li.innerHTML = name
+
+    input.value = "";
+    list.append(li)
+}
+
+function clearList() {
+    list.innerHTML = "";
+}

@@ -60,13 +60,14 @@ function changeBack() {
     catImage.src = "assets/img/cat1.jpeg";
 }
 
-// const box = document.querySelector('.box');
+const box = document.querySelector('.box');
+// console.log(box);
 // const b = 25
 
-// const el = document.createElement('div');
-// el.style.cssText = 'width: 100px; height: 20px; background-color:yellow';
+const el = document.createElement('div');
+el.style.cssText = 'width: 100px; height: 20px; background-color:yellow';
 
-// box.append(el)
+box.append(el)
 
 // box.innerHTML = `<input type="text" placeholder="введите имя"/>
 // <h1>${b}</h1>

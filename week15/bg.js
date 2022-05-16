@@ -2,13 +2,16 @@ let mode, container;
 
 function getElements() {
     mode = document.querySelector('#mode');
-    container = document.querySelector('.container');
+    container = document.querySelector('body');
     
     return
 }
 
 function changeMode(){
     getElements();
+    container.classList.remove("bg-white");
+    container.classList.remove("bg-dark");
+    container.classList.remove("bg-blue");
 
     switch(mode.value) {
         case "white":

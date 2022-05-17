@@ -1,6 +1,5 @@
 let btnSubmit, userName, lastName, accountName, password, errorMessage1, errorMessage2, errorMessage3, errorMessage4, errorMessage5, passwordRepeat; //Объявляем переменные
 
-function getElements() { //Присваиваем значения переменным
     btnSubmit = document.querySelector('.btn-submit');
     userName = document.querySelector('#name');
     lastName = document.querySelector('#lastName');
@@ -11,12 +10,9 @@ function getElements() { //Присваиваем значения переме�
     errorMessage2 = document.querySelector(".errorMessage_2");
     errorMessage3 = document.querySelector(".errorMessage_3");
     errorMessage4 = document.querySelector(".errorMessage_4");
-    errorMessage5 = document.querySelector(".errorMessage_5");
-    return
-}
+    errorMessage5 = document.querySelector(".errorMessage_5"); //Строки 3-13 - присваиваем значения переменным
 
 function check() {
-    getElements(); //Вызываем переменные
     errorMessage1.innerHTML = ""; 
     errorMessage2.innerHTML = "";
     errorMessage3.innerHTML = "";
@@ -124,8 +120,6 @@ function check() {
     }
 
 }
-
-getElements(); //Вызываем переменные
 
 function accountNameTest(accountName) { //Проверка введенного имени пользователя
     console.log(accountName.value);

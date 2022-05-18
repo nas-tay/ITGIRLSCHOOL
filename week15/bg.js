@@ -1,14 +1,7 @@
-let mode, container;
-
-function getElements() {
-    mode = document.querySelector('#mode');
-    container = document.querySelector('body');
-    
-    return
-}
+let mode = document.querySelector('#mode'),
+container = document.querySelector('body');
 
 function changeMode(){
-    getElements();
     container.classList.remove("bg-white");
     container.classList.remove("bg-dark");
     container.classList.remove("bg-blue");
@@ -29,5 +22,4 @@ function changeMode(){
     
 }
 
-getElements();
 mode.addEventListener("change", changeMode);

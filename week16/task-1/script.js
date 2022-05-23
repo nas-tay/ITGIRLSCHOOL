@@ -1,7 +1,7 @@
 let arr = [];
 let sum = 0;
 
-for (;;) {
+for (let index = 0; index < Infinity; index++) {
   let item = Number(prompt("Введите число", ''));
   if (!item) break;
   arr.push(item);

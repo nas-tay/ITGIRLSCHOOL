@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>t1w17</title>
+        <style>
+            .displayResult {
+                display: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container m-5">
+            <div class="card mb-3">
+                <div class="card-body">
+                    <label for="userName" class="form-label">ФИО</label>
+                    <input
+                        class="form-control"
+                        type="text"
+                        name="userName"
+                        id="userName"
+                        placeholder="Иванов Иван Иванович"
+                    />
+                    <button
+                        type="button"
+                        class="btn btn-primary mt-2"
+                        id="send"
+                    >
+                        Отправить
+                    </button>
+                </div>
+            </div>
+            <div class="result displayResult">
+                <div class="card">
+                    <div class="card-body">
+                        <label for="userLastName" class="form-label"
+                            >Фамилия</label
+                        >
+                        <input
+                            class="form-control"
+                            type="text"
+                            name="userLastName"
+                            id="userLastName"
+                            placeholder="Иванов"
+                            disabled
+                        />
+                        <label for="userFirstName" class="form-label"
+                            >Имя</label
+                        >
+                        <input
+                            class="form-control"
+                            type="text"
+                            name="userFirstName"
+                            id="userFirstName"
+                            placeholder="Иван"
+                            disabled
+                        />
+                        <label for="userPatronymic" class="form-label"
+                            >Отчество</label
+                        >
+                        <input
+                            class="form-control"
+                            type="text"
+                            name="userPatronymic"
+                            id="userPatronymic"
+                            placeholder="Иванович"
+                            disabled
+                        />
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <script src="index.js"></script>
+    </body>
+</html>

@@ -27,179 +27,260 @@
                 </div>
                 <div class="modal-body">
                     <form>
-                        <div class="mb-3">
-                            <label for="brand" class="form-label">Марка</label>
-                            <select
-                                class="form-select"
-                                aria-label="Default select example"
-                                id="brand"
-                                onchange="selectBrand(this)"
-                            >
-                                <option value="Audi">Audi</option>
-                                <option value="BMW">BMW</option>
-                                <option value="Mercedes">Mercedes</option>
-                                <option value="Ford">Ford</option>
-                            </select>
-                        </div>
-                        <div class="mb-3" id="modelsDiv" style="display: none">
-                            <label for="models" class="form-label"
-                                >Модель</label
-                            >
-                            <select
-                                class="form-select"
-                                name="models"
-                                id="models"
-                            ></select>
-                        </div>
-                        <div class="mb-3">
-                            <label for="year" class="form-label"
-                                >Год выпуска
-                            </label>
-                            <select
-                                class="form-select"
-                                aria-label="Default select example"
-                                id="year"
-                            >
-                                <option value="5000000">2022</option>
-                                <option value="4000000">2021</option>
-                                <option value="3000000">2020</option>
-                                <option value="2000000">2019</option>
-                                <option value="1000000">
-                                    более позднего выпуска
-                                </option>
-                            </select>
-                        </div>
-                        <fieldset class="row mb-3">
-                            <legend class="col-form-label col-sm-3 pt-0">
-                                Пробег
-                            </legend>
-                            <div class="col-sm-9">
-                                <div class="form-check">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="mileage"
-                                        id="gridRadios1"
-                                        value="3000000"
-                                        checked
-                                    />
-                                    <label
-                                        class="form-check-label"
-                                        for="gridRadios1"
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="mb-3">
+                                    <label for="brand" class="form-label"
+                                        >Марка</label
                                     >
-                                        до 10 000 км
-                                    </label>
+                                    <select
+                                        class="form-select"
+                                        aria-label="Default select example"
+                                        id="brand"
+                                        onchange="selectBrand(this)"
+                                    >
+                                        <option value="Audi">Audi</option>
+                                        <option value="BMW">BMW</option>
+                                        <option value="Mercedes">
+                                            Mercedes
+                                        </option>
+                                        <option value="Ford">Ford</option>
+                                    </select>
                                 </div>
-                                <div class="form-check">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="mileage"
-                                        id="gridRadios2"
-                                        value="2000000"
-                                    />
-                                    <label
-                                        class="form-check-label"
-                                        for="gridRadios2"
+                                <div
+                                    class="mb-3"
+                                    id="modelsDiv"
+                                    style="display: none"
+                                >
+                                    <label for="model" class="form-label"
+                                        >Модель</label
                                     >
-                                        до 50 000 км
-                                    </label>
+                                    <select
+                                        class="form-select"
+                                        name="model"
+                                        id="model"
+                                    ></select>
                                 </div>
-                                <div class="form-check">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="mileage"
-                                        id="gridRadios3"
-                                        value="1000000"
-                                    />
-                                    <label
-                                        class="form-check-label"
-                                        for="gridRadios3"
-                                    >
-                                        до 100 000 км
+                                <div class="mb-3">
+                                    <label for="year" class="form-label"
+                                        >Цвет кузова
                                     </label>
+                                    <select
+                                        class="form-select"
+                                        aria-label="Default select example"
+                                        id="color"
+                                    >
+                                        <option value="100000">Чёрный</option>
+                                        <option value="95000">Белый</option>
+                                        <option value="90000">
+                                            Серебристый
+                                        </option>
+                                        <option value="85000">Красный</option>
+                                        <option value="60000">Голубой</option>
+                                        <option value="30000">Зелёный</option>
+                                        <option value="30000">Синий</option>
+                                    </select>
                                 </div>
-                                <div class="form-check">
-                                    <input
-                                        class="form-check-input"
-                                        type="radio"
-                                        name="mileage"
-                                        id="gridRadios5"
-                                        value="500000"
-                                    />
-                                    <label
-                                        class="form-check-label"
-                                        for="gridRadios5"
-                                    >
-                                        свыше 100 000 км
+                                <div class="mb-3">
+                                    <label for="year" class="form-label"
+                                        >Год выпуска
                                     </label>
+                                    <select
+                                        class="form-select"
+                                        aria-label="Default select example"
+                                        id="year"
+                                    >
+                                        <option value="3000000">2022</option>
+                                        <option value="2000000">2021</option>
+                                        <option value="1500000">2020</option>
+                                        <option value="1000000">2019</option>
+                                        <option value="500000">
+                                            более позднего выпуска
+                                        </option>
+                                    </select>
                                 </div>
                             </div>
-                        </fieldset>
-                        <fieldset class="row mb-3">
-                            <legend class="col-form-label col-sm-3 pt-0">
-                                Опции
-                            </legend>
-                            <div class="col-sm-9">
-                                <div class="form-check">
-                                    <input
-                                        class="form-check-input option"
-                                        type="checkbox"
-                                        value="50000"
-                                        id="gridCheck1"
-                                    />
-                                    <label
-                                        class="form-check-label"
-                                        for="gridCheck1"
+                            <div class="col-sm-6">
+                                <fieldset class="row mb-3">
+                                    <legend
+                                        class="col-form-label col-sm-12 pt-0"
                                     >
-                                        Кнопка запуска двигателя
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input
-                                        class="form-check-input option"
-                                        type="checkbox"
-                                        value="70000"
-                                        id="gridCheck2"
-                                    />
-                                    <label
-                                        class="form-check-label"
-                                        for="gridCheck2"
+                                        Пробег
+                                    </legend>
+                                    <div class="col-sm-12">
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="mileage"
+                                                id="gridRadios1"
+                                                value="2000000"
+                                                checked
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="gridRadios1"
+                                            >
+                                                до 10 000 км
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="mileage"
+                                                id="gridRadios2"
+                                                value="1000000"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="gridRadios2"
+                                            >
+                                                до 50 000 км
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="mileage"
+                                                id="gridRadios3"
+                                                value="500000"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="gridRadios3"
+                                            >
+                                                до 100 000 км
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input"
+                                                type="radio"
+                                                name="mileage"
+                                                id="gridRadios5"
+                                                value="100000"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="gridRadios5"
+                                            >
+                                                свыше 100 000 км
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                                <fieldset class="row mb-3">
+                                    <legend
+                                        class="col-form-label col-sm-12 pt-0"
                                     >
-                                        Климат-контроль
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input
-                                        class="form-check-input option"
-                                        type="checkbox"
-                                        value="80000"
-                                        id="gridCheck3"
-                                    />
-                                    <label
-                                        class="form-check-label"
-                                        for="gridCheck3"
-                                    >
-                                        Противоугонная сигнализация
-                                    </label>
-                                </div>
-                                <div class="form-check">
-                                    <input
-                                        class="form-check-input option"
-                                        type="checkbox"
-                                        value="150000"
-                                        id="gridCheck4"
-                                    />
-                                    <label
-                                        class="form-check-label"
-                                        for="gridCheck4"
-                                    >
-                                        Система контроля дистанции
-                                    </label>
-                                </div>
+                                        Дополнительно
+                                    </legend>
+                                    <div class="col-sm-12">
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input option"
+                                                type="checkbox"
+                                                value="25000"
+                                                id="gridCheck1"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="gridCheck1"
+                                            >
+                                                Кнопка запуска двигателя
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input option"
+                                                type="checkbox"
+                                                value="50000"
+                                                id="gridCheck2"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="gridCheck2"
+                                            >
+                                                Климат-контроль
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input option"
+                                                type="checkbox"
+                                                value="10000"
+                                                id="gridCheck3"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="gridCheck3"
+                                            >
+                                                Противоугонная сигнализация
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input option"
+                                                type="checkbox"
+                                                value="150000"
+                                                id="gridCheck4"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="gridCheck4"
+                                            >
+                                                Парктроники
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input option"
+                                                type="checkbox"
+                                                value="50000"
+                                                id="gridCheck5"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="gridCheck5"
+                                            >
+                                                Панорамная крыша
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input option"
+                                                type="checkbox"
+                                                value="30000"
+                                                id="gridCheck6"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="gridCheck6"
+                                            >
+                                                ABS
+                                            </label>
+                                        </div>
+                                        <div class="form-check">
+                                            <input
+                                                class="form-check-input option"
+                                                type="checkbox"
+                                                value="25000"
+                                                id="gridCheck7"
+                                            />
+                                            <label
+                                                class="form-check-label"
+                                                for="gridCheck7"
+                                            >
+                                                Датчик дождя
+                                            </label>
+                                        </div>
+                                    </div>
+                                </fieldset>
                             </div>
-                        </fieldset>
+                        </div>
+                        <div class="resultText"></div>
                         <button
                             type="submit"
                             class="btn btn-primary result"
@@ -208,7 +289,6 @@
                             Рассчитать стоимость
                         </button>
                     </form>
-                    <div class="resultText"></div>
                 </div>
             </div>
         </div>

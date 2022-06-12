@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>t2w17</title>
+        <style>
+            #comment {
+                resize: none;
+                width: 50vw;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Comments</h1>
+        <div class="commentContainer">
+            <p class="none" style="color: gray">~Be the first to comment on this~</p>
+        </div>
+        <h2>Leave your comment below:</h2>
+        <div class="name">
+            <label for="userName">Your name:</label>
+            <input type="text" id="userName" placeholder="name" />
+        </div>
+        <div class="picture">
+            <label for="userPicture">Leave a link to your picture:</label>
+            <input type="text" id="userPicture" />
+        </div>
+        <textarea name="comment" id="comment" cols="40" rows="6"></textarea>
+        <button type="button" id="send">Отправить</button>
+        <script src="index.js"></script>
+    </body>
+</html>

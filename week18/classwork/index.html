@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <h1>Проверить номер карты</h1>
+        <input type="text" id="creditCardField" />
+        <button id="send">send</button>
+
+        <h1>Проверка на число</h1>
+        <input type="text" id="number" />
+        <button id="check">Check</button>
+        <h1>only numbers</h1>
+        <input type="text" onkeypress="validate(event)" />
+        <h1>numbers only</h1>
+        <input type="text" class="ss" />
+        <h1>ФИО</h1>
+        <input type="text" id="foo" />
+        <button id="clikk">click</button>
+        <script>
+            function validate() {
+                let creditCardField = document.querySelector("#creditCardField");
+                console.log(creditCardField.value);
+                let creditCardFormat = /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/;
+                if (creditCardField.value.match(creditCardFormat)) {
+                    alert("Номер карты введен верно");
+                    return true;
+                } else {
+                    alert("Проверьте введенный номер карты");
+                    return false;
+                }
+                //Или так:
+                // let regexp = /^(?:4[0-9]{12}(?:[0-9]{3})?|5[1-5][0-9]{14}|6(?:011|5[0-9][0-9])[0-9]{12}|3[47][0-9]{13}|3(?:0[0-5]|[68][0-9])[0-9]{11}|(?:2131|1800|35\d{3})\d{11})$/;
+                // if (regexp.test(creditCardField.value)) {
+                //     alert("Номер карты введен верно");
+                //     return true;
+                // } else {
+                //     alert("Проверьте введенный номер карты");
+                //     return false;
+                // }
+            }
+            document.querySelector("#send").addEventListener("click", validate);
+
+            function validateNum() {
+                let numberField = document.querySelector("#number");
+                let numFormat = /^\d{1,}$/;
+                if (numberField.value.match(numFormat)) {
+                    alert("OK");
+                    return true;
+                } else {
+                    alert("Можно ввести только число");
+                    return false;
+                }
+            }
+            document.querySelector("#check").addEventListener("click", validateNum);
+
+            function validate(evt) {
+                var theEvent = evt || window.event;
+                var key = theEvent.keyCode || theEvent.which;
+                key = String.fromCharCode(key);
+                var regex = /[0-9]|\./;
+                if (!regex.test(key)) {
+                    theEvent.returnValue = false;
+                    if (theEvent.preventDefault) theEvent.preventDefault();
+                }
+            }
+
+            document.querySelector(".ss").addEventListener("input", function (e) {
+                this.value = this.value.replace(/[^\d]/g, "");
+            });
+
+            document.querySelector("#clikk").addEventListener("click", () => {
+                let regExp = /^([А-ЯA-Z]|[А-ЯA-Z][\x27а-яa-z]{1,}|[А-ЯA-Z][\x27а-яa-z]{1,}\-([А-ЯA-Z][\x27а-яa-z]{1,}|(оглы)|(кызы)))\040[А-ЯA-Z][\x27а-яa-z]{1,}(\040[А-ЯA-Z][\x27а-яa-z]{1,})?$/i;
+                console.log(document.querySelector("#foo").value);
+                if (regExp.test(document.querySelector("#foo").value)) {
+                    console.log("true");
+                } else {
+                    console.log("false");
+                }
+            });
+        </script>
+    </body>
+</html>

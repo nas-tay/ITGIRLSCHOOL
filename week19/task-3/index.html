@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>week15</title>
+</head>
+
+<body>
+    <h1>Калькулятор</h1>
+    <input type="text" name="number" id="num1">
+    <input type="text" name="number" id="num2">
+    <select name="func" id="func">
+        <option value="default" selected="selected" disabled>выберите действие</option>
+        <option value="plus">+</option>
+        <option value="minus">-</option>
+        <option value="multiply">*</option>
+        <option value="divide">/</option>
+    </select>
+    <input type="text" class="result" disabled>
+    <script>
+        //Проверка инпутов, чтобы принимали только числа
+        function acceptNumbers(e) {
+            this.value = this.value.replace(/[^\d]/g, "");
+        }
+        document.querySelector("#num1").addEventListener("input", acceptNumbers);
+        document.querySelector("#num2").addEventListener("input", acceptNumbers);
+
+        function count() {
+            func = document.querySelector('#func');
+            num1 = document.querySelector('#num1').value;
+            num2 = document.querySelector('#num2').value;
+            result = document.querySelector('.result');
+
+            switch (func.value) {
+                case "plus":
+                    result.value = Calc.sum(num1, num2);
+                    break;
+
+                case "minus":
+                    result.value = Calc.sub(num1, num2);
+                    break;
+
+                case "multiply":
+                    result.value = Calc.mul(num1, num2);
+                    break;
+
+                case "divide":
+                    if (num2 == 0) {
+                        result.value = "";
+                        alert("На ноль делить нельзя!")
+                        break;
+                    }
+                    result.value = Calc.divide(num1, num2);
+                    break;
+            }
+
+        }
+
+        class Calc {
+            static sum(a, b) {
+                return +a + +b
+            }
+            static sub(a, b) {
+                return a - b
+            }
+            static mul(a, b) {
+                return a * b
+            }
+            static divide(a, b) {
+                return a / b
+            }
+        }
+
+        func.addEventListener("change", count);
+    </script>
+</body>
+
+</html>

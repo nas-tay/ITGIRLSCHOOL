@@ -119,6 +119,7 @@
                     <label for="rate"> Оцените супергероя:
                         <input type="text" id="rate" value="${hero.rating}" autofocus>/10
                     </label>
+                    <button id="sendRating" onclick="saveRating()">Сохранить</button>
                     </div>
                 </div>
                 `
@@ -149,8 +150,8 @@
             })
 
 
-            console.log(heroes[0].name);
-            console.log(document.querySelector('#rate'));
+            // console.log(heroes[0].rating);
+            // console.log(document.querySelector('#rate'));
             // hero.rating = rating.value;
 
         })
@@ -159,7 +160,23 @@
         //     let response = await fetch(url);
         //     let heroes = await response.json();
         // })
-        console.log(document.querySelector('#rate'));
+        async function saveRating() {
+            let rating = document.querySelector('#rate');
+
+            let url = 'index.json';
+            let response = await fetch(url);
+            let heroes = await response.json();
+
+            if (rating.value) {
+                for (const hero of heroes) {
+                    // hero.rating = rating.value;
+                    localStorage.setItem(hero.name, rating.value);
+                    break;
+                }
+            }
+
+
+        }
     </script>
 </body>
 

@@ -75,7 +75,12 @@ function getWeather(city, lang, units) {
             document.querySelector(".wind").innerText = windTitle + (lang == "en" ? windEn : wind) + speedText + Math.round(weather.wind.speed) + speedMetric;
             document.querySelector(".high-low").innerText = maxText + Math.round(weather.main.temp_max) + "°" + " / " + minText + Math.round(weather.main.temp_min) + "°";
         })
-        .catch((err) => console.log(err));
+        .catch((err) => {
+            console.log(err);
+            if (err) {
+                document.querySelector("#errorApi").innerHTML = "Город не найден";
+            }
+        });
 }
 
 function chooseCity() {
@@ -122,6 +127,9 @@ document.querySelector("#lang").addEventListener("change", () => {
             `;
             if (document.querySelector("#error").innerHTML) {
                 document.querySelector("#error").innerHTML = errorTextEn;
+            }
+            if (document.querySelector("#errorApi").innerHTML) {
+                document.querySelector("#errorApi").innerHTML = "City not found";
             }
             break;
         default:

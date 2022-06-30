@@ -76,6 +76,9 @@ select {
 @media screen and (max-width: 400px) {
     .description {
         font-size: 25px;
-        margin-bottom: 20px;
+    }
+
+    .cityName {
+        font-size: 30px;
     }
 }

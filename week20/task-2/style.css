@@ -72,3 +72,10 @@ select {
 .error {
     color: red;
 }
+
+@media screen and (max-width: 400px) {
+    .description {
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+}

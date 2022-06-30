@@ -11,33 +11,35 @@
 
 
 <body>
-    <div class="weather">
-        <div class="cityName"></div>
-        <div class="current"></div>
-        <div class="feels_like"></div>
-        <div class="description"></div>
-        <div class="humidity"></div>
-        <div class="wind"></div>
-        <div class="high-low"></div>
-    </div>
-    <div class="user">
-        <div class="settings">
-            <select id="lang">
-                <option value="ru" selected>ru</option>
-                <option value="en">en</option>
-            </select> <br />
-            <select id="units">
-                <option value="c">°C</option>
-                <option value="f">°F</option>
-            </select>
+    <div class="container">
+        <div class="weather">
+            <div class="cityName"></div>
+            <div class="current"></div>
+            <div class="feels_like"></div>
+            <div class="description"></div>
+            <div class="humidity"></div>
+            <div class="wind"></div>
+            <div class="high-low"></div>
         </div>
-        <div class="city">
-            <span class="citySelect">
-                <label for="city">Введите название города:</label>
-                <input type="text" id="city" placeholder="город">
-            </span>
-            <button id="send" onclick="chooseCity()">OK</button>
-            <div class="error" id="error"></div> <br />
+        <div class="user">
+            <div class="settings">
+                <select id="lang">
+                    <option value="ru" selected>ru</option>
+                    <option value="en">en</option>
+                </select> <br />
+                <select id="units">
+                    <option value="c">°C</option>
+                    <option value="f">°F</option>
+                </select>
+            </div>
+            <div class="city">
+                <span class="citySelect">
+                    <label for="city">Введите название города:</label>
+                    <input type="text" id="city" placeholder="город">
+                </span>
+                <button id="send" onclick="chooseCity()">OK</button>
+                <div class="error" id="error"></div> <br />
+            </div>
         </div>
     </div>
 

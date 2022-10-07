@@ -1,0 +1,117 @@
+:root {
+    --tariffTitle: #fff;
+    --details: #747272;
+    --bgDetails: #e5e2e2;
+    --bgSpeed: #f3f0f0;
+    --bgTitle300: #418691;
+    --bgRate300: #55adbb;
+    --bgTitle450: #418368;
+    --bgRate450: #58967c;
+    --bgTitle550: #b34a2a;
+    --bgRate550: #cc614e;
+    --bgTitle1000: #2b303a;
+    --bgRate1000: #383a3f;
+}
+
+.tariff {
+    margin: 1px;
+}
+
+.tariff:first-child>:first-child{
+    background-color: var(--bgTitle300);
+}
+
+.tariff:first-child>:nth-child(2){
+    background-color: var(--bgRate300);
+}
+
+.tariff:nth-child(2)>:first-child{
+    background-color: var(--bgTitle450);
+}
+
+.tariff:nth-child(2)>:nth-child(2){
+    background-color: var(--bgRate450);
+}
+
+.tariff:nth-child(3)>:first-child{
+    background-color: var(--bgTitle550);
+}
+
+.tariff:nth-child(3)>:nth-child(2){
+    background-color: var(--bgRate550);
+}
+
+.tariff:nth-child(4)>:first-child{
+    background-color: var(--bgTitle1000);
+}
+
+.tariff:nth-child(4)>:nth-child(2){
+    background-color: var(--bgRate1000);
+}
+
+.selected{
+    /* transform: scale(1, 1.05); */
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.tariff__title {
+    padding: 14px;
+    color: var(--tariffTitle);
+    font-size: 14px;
+    margin: 0;
+}
+
+.selected__title {
+    padding: 22px;
+}
+
+.tariff__rate {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding: 25px 15px;
+}
+
+.tariff__currency {
+    align-self: flex-start;
+    color: var(--tariffTitle);
+    margin-right: 4px;
+}
+
+.rate-details {
+    font-weight: 400;
+    font-size: 12px;
+}
+
+.tariff__price {
+    position: relative;
+    font-weight: 500;
+    font-size: 40px;
+    letter-spacing: -1.5px;
+    color: var(--tariffTitle);
+    box-sizing:content-box;
+    padding: 0;
+}
+
+.tariff__term {
+    color: var(--tariffTitle);
+    margin-bottom: 3px;
+}
+
+.details {
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--details);
+    padding: 15px;
+}
+
+.tariff__speed {
+    padding: 10px;
+    background-color: var(--bgSpeed);
+    padding: 20px;
+}
+
+.tariff__details {
+    background-color: var(--bgDetails);
+    line-height: 1.7;
+}

@@ -1,7 +1,4 @@
-import Tariff from "../tariff/card";
-import "./tariffs.css";
-
-const tariffs = [
+export const tariffs = [
     {
         id: "01",
         title: "Безлимитный 300",
@@ -32,13 +29,3 @@ const tariffs = [
         details: "Объем включенного трафика не ограничен",
     },
 ];
-
-export default function Tariffs() {
-    return (
-        <div className="tariffs">
-            {tariffs.map((tariff) => (
-                <Tariff title={tariff.title} rate={tariff.rate} speed={tariff.speed} details={tariff.details} isSelected={tariff.isSelected} key={tariff.id}></Tariff>
-            ))}
-        </div>
-    );
-}

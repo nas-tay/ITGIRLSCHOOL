@@ -1,10 +1,10 @@
 import "./App.css";
-import Tariffs from "./components/tariffs/tariffs";
+import TariffCards from "./components/tariffCards/TariffCards";
 
 function App() {
     return (
         <div className="App">
-            <Tariffs />
+            <TariffCards />
         </div>
     );
 }

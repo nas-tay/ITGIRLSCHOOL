@@ -1,3 +1,6 @@
+<img width="862" alt="tariffs" src="https://user-images.githubusercontent.com/97975419/194616422-f25a8e68-e71a-4238-a5d2-4ade65ac3b63.png">
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

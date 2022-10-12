@@ -6,7 +6,7 @@ export default function TariffCards() {
     return (
         <div className="tariffs">
             {tariffs.map((tariff) => (
-                <TariffCard tariff={tariff} key={tariff.id} />
+                <TariffCard data={tariff} key={tariff.id} />
             ))}
         </div>
     );

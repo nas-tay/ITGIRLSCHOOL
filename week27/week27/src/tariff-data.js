@@ -19,7 +19,6 @@ export const tariffs = [
         rate: 550,
         speed: 100,
         details: "Объем включенного трафика не ограничен",
-        isSelected: true,
     },
     {
         id: "04",

@@ -1,10 +1,12 @@
+import React from "react";
 import "./tariffCard.css";
 
-function TariffCard({ data }) {
-    const { title, rate, speed, details, isSelected } = data;
+function TariffCard({ data, toggleSelected, toggleSelectedStyles }) {
+    const { title, rate, speed, details, id } = data;
+
     return (
-        <div className={"tariff " + (isSelected ? "selected" : "")}>
-            <h2 className={"tariff__title " + (isSelected && "selected__title")}>{title}</h2>
+        <div className={toggleSelectedStyles(id)} onClick={() => toggleSelected(id)}>
+            <h2 className={"tariff__title"}>{title}</h2>
             <div className="tariff__rate">
                 <div className="tariff__currency rate-details">руб</div>
                 <div className="tariff__price">{rate}</div>
